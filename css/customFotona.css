@@ -1,0 +1,2735 @@
+/*
+ Theme Name:   GeneratePress Child
+ Theme URI:    https://generatepress.com
+ Description:  Default GeneratePress child theme
+ Author:       Tom Usborne
+ Author URI:   https://tomusborne.com
+ Template:     generatepress
+ Version:      0.1
+*/
+button,
+input,
+textarea,
+select,
+label,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="submit"] {
+	font-family: var(--font-main);
+}
+
+input {
+	background-color: #FFFFFF !important;
+	border: 1px solid #487E89 !important;
+	border-radius: 3px !important;
+	font-weight: 500;
+	color: var(--contrast-dark) !important;
+	padding: 10px 15px !important;
+	outline: none;
+}
+
+/* BTN */
+.btn-center {
+	margin: auto;
+}
+
+/* BOX */
+.box {
+	position: absolute;
+	display: none !important;
+}
+
+.box--aqua {
+	background: var(--aqua);
+}
+
+.box--teal {
+	background: var(--teal);
+}
+
+/* IMG */
+.img-full {
+	width: 100%;
+	display: block;
+}
+
+/* BACKGROUND */
+.bg-grey {
+	background: var(--porcelain);
+}
+
+.bg-white {
+	background: var(--white);
+}
+
+/* TOPBAR ICONS */
+.topbar .iconTopbar,
+.topbar .iconSocial {
+	width: 18px !important;
+	height: 18px !important;
+	object-fit: contain;
+}
+
+.bg-aqua {
+	background: var(--aqua);
+}
+
+.bg-teal {
+	background: var(--teal);
+}
+
+/* POSITION */
+.section-rel {
+	position: relative;
+}
+
+/* HERO */
+.hero {
+	background-size: cover;
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+}
+
+/* VIDEO */
+h2.titleVideo {
+	text-align: center;
+	margin: auto;
+}
+
+.containerVideo {
+	line-height: 0;
+}
+
+video {
+	width: 100%;
+	height: auto;
+}
+
+/* TRATTAMENTO */
+ul.listTrattamento {
+	list-style: none;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.boxAquaTrattamento {
+	right: 0;
+}
+
+/* MIGLIORARE */
+.gridMigliorare {
+	display: flex;
+}
+
+/* RECENSIONI */
+.copertinaRecensioni {
+	background-size: cover !important;
+}
+
+
+.recensioni .btn--aqua {
+	background-color: #487E89 !important;
+	color: #FFFFFF !important;
+}
+
+/* Override white text in lightened migliorare section */
+.migliorare .text--white {
+	color: #25475C !important;
+}
+
+/* FOOTER FIXES */
+.footer {
+	padding: 60px 8vw 40px !important;
+	background-color: #487E89 !important;
+}
+
+img.logoFooter {
+	margin: 0 0 20px 0 !important;
+	max-width: 250px !important;
+	height: auto !important;
+}
+
+.gridFooter {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+	align-items: flex-start;
+}
+
+.colFooter {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	/* Reduced gap for right column links and general lines */
+}
+
+.socialFooter {
+	margin-top: 15px !important;
+	display: flex;
+	gap: 15px;
+}
+
+p.textFooter {
+	line-height: 1.5 !important;
+	margin-bottom: 5px !important;
+}
+
+/* Fix invisible footer links */
+a.linkFooter.text--white,
+a.linkFooter.text--white:hover,
+a.linkFooter.text--white:focus,
+a.linkFooter.text--white:active {
+	color: #FFFFFF !important;
+	margin-bottom: 5px !important;
+	/* Adding slight vertical spacing instead of relying on inherited huge line heights */
+	line-height: 1.2 !important;
+}
+
+/* PROBLEMI */
+h2.titleProblemi span {
+	color: #82B4B6E5;
+}
+
+/* FORM */
+.gridFormVisita {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nf-form-fields-required,
+.nf-after-field .nf-error-msg,
+.nf-error-msg.nf-error-field-errors {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	color: #FFFFFF80;
+}
+
+span.ninja-forms-req-symbol {
+	color: #487E89;
+	font-weight: 600;
+}
+
+input::placeholder,
+.checkbox-wrap>.nf-field-label>label {
+	font-weight: 500;
+	color: #6E7E82;
+}
+
+.checkbox-wrap {
+	display: flex;
+}
+
+.checkbox-wrap>.nf-field-label {
+	padding: 0 !important;
+}
+
+input[type=checkbox] {
+	appearance: none !important;
+	-webkit-appearance: none !important;
+	background: #FFFFFF !important;
+	border: none !important;
+	border-radius: 100% !important;
+	width: 20px !important;
+	height: 20px !important;
+	min-width: 20px !important;
+	min-height: 20px !important;
+	max-width: 20px !important;
+	max-height: 20px !important;
+	padding: 0 !important;
+	box-sizing: content-box !important;
+	display: inline-block !important;
+	position: relative !important;
+	cursor: pointer !important;
+	outline: none !important;
+	box-shadow: none !important;
+	flex-shrink: 0 !important;
+	flex-grow: 0 !important;
+}
+
+/* High-specificity override to beat NinjaForms display-structure.css width:auto */
+.field-wrap>div input[type=checkbox],
+.nf-field-element input[type=checkbox],
+.checkbox-wrap input[type=checkbox] {
+	width: 20px !important;
+	height: 20px !important;
+	max-width: 20px !important;
+	max-height: 20px !important;
+	border-radius: 100% !important;
+}
+
+input[type=checkbox]:focus,
+input[type=checkbox]:active {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+input[type=checkbox]:checked {
+	background: rgb(14, 72, 91) !important;
+}
+
+input[type=checkbox]:checked::after {
+	content: "" !important;
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
+	width: 9px !important;
+	height: 9px !important;
+	background: rgba(130, 180, 182, 0.9) !important;
+	border-radius: 50% !important;
+}
+
+input[type="submit"] {
+	width: 100% !important;
+	font-weight: 600 !important;
+	background: #487E89 !important;
+	color: #fff !important;
+	border-radius: 0px !important;
+	border: none !important;
+}
+
+.checkbox-wrap {
+	align-items: center;
+	gap: 10px;
+}
+
+label a {
+	text-decoration: none;
+}
+
+label a:hover {
+	color: #487E89;
+}
+
+.nf-form-fields-required,
+.checkbox-wrap>.nf-field-label>label,
+.nf-after-field .nf-error-msg {
+	font-size: 15px;
+}
+
+/* POPUP */
+.popupForm.showPopup {
+	opacity: 1;
+	z-index: 10004;
+	transform: scale(1);
+}
+
+.popupForm {
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: fixed;
+	overflow-y: auto;
+	transform: scale(0);
+	justify-content: center;
+	background-color: #0000009C;
+	transition: all .3s ease-in-out;
+}
+
+.popupForm .closePopup {
+	cursor: pointer;
+	position: absolute;
+}
+
+.innerPopup {
+	margin: auto 0;
+	overflow: auto;
+	position: relative;
+	height: fit-content;
+	background-color: #25475C;
+}
+
+.closePopup span {
+	line-height: 1;
+	color: white;
+}
+
+@media (width <=550px) {
+	.btn {
+		padding: 4.5vw;
+		font-size: 4vw;
+		line-height: 6vw;
+		width: 100%;
+	}
+
+	/* HERO */
+	h2.subtitleHero,
+	p.textHero,
+	p.overtitleHero {
+		font-size: 4vw;
+		line-height: 5.5vw;
+	}
+
+	p.overtitleHero {
+		width: 70vw;
+		padding-bottom: 4.5vw;
+	}
+
+	h2.subtitleHero,
+	p.textHero {
+		width: 79vw;
+	}
+
+	.col2Hero {
+		background-image: url('../images/heroFotonaBrixia550.webp');
+		height: calc(100vw / (550 / 421));
+	}
+
+	/* TRATTAMENTO */
+	li.itemList {
+		font-size: 4vw;
+	}
+
+	/* MIGLIORARE */
+	p.textMigliorare {
+		font-size: 4vw;
+		line-height: 5.5vw;
+	}
+
+	/* VISITA */
+	h2.titleVisita,
+	p.textBoldVisita,
+	p.textVisita,
+	p.textAquaVisita,
+	p.textActionVisita {
+		font-size: 4vw;
+	}
+
+	p.textVisita,
+	p.textActionVisita {
+		line-height: 5.5vw;
+		width: 80vw;
+	}
+
+	p.textAquaVisita {
+		line-height: 5.5vw;
+		width: 78vw;
+	}
+
+	/* FUNZIONA */
+	p.textBoldFunziona,
+	p.textFunziona {
+		font-size: 4vw;
+	}
+
+	.col2Funziona {
+		background: url('../images/backFunziona550.webp');
+		height: calc(100vw / (550 / 354));
+	}
+
+	/* RECENSIONI */
+	.copertinaRecensioni {
+		background: url('../images/copertinaRecensioni550.webp');
+		height: calc(100vw / (550 / 233));
+	}
+
+	p.textRecensioni {
+		font-size: 4vw;
+	}
+
+	/* PROBLEMI */
+	p.textProblemi {
+		font-size: 4vw;
+	}
+
+	/* SOPPORTARE */
+	p.textSopportare {
+		font-size: 4vw;
+		width: 78vw;
+	}
+
+	/* FORM */
+	h2.titleFormVisita,
+	p.textFormVisita {
+		padding-bottom: 5vw;
+	}
+
+	p.textFormVisita {
+		font-size: 4vw;
+	}
+
+	.nf-field-container {
+		margin-bottom: 3.3vw !important;
+	}
+
+	.nf-form-fields-required {
+		padding-bottom: 1.5vw;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"] {
+		font-size: 3.6vw !important;
+		padding: 4vw 4.5vw !important;
+	}
+
+	.nf-form-fields-required,
+	.nf-error-msg,
+	label {
+		font-size: 3.2vw !important;
+	}
+
+	.checkbox-wrap>.nf-field-element,
+	input[type=checkbox] {
+		height: 5vw !important;
+		width: 5vw !important;
+	}
+
+	input[type=checkbox]:checked::after {
+		width: 1.5vw !important;
+		height: 1.5vw !important;
+	}
+
+	input[type="submit"] {
+		font-size: 4vw;
+		padding: 4vw !important;
+	}
+
+	/* POPUP FORM */
+	.innerPopup {
+		width: 100vw;
+		height: 100vh;
+		padding: 12vw 8vw;
+	}
+
+	h2.titlePopup {
+		padding-bottom: 6vw;
+	}
+
+	.closePopup {
+		top: 3vw;
+		right: 2.2vw;
+	}
+
+	.closePopup span {
+		font-size: 7vw;
+	}
+}
+
+@media (width >=551px) and (width <=766.9px) {
+	.btn {
+		padding: 3.5vw;
+		font-size: 3.3vw;
+		line-height: 4vw;
+	}
+
+	/* HERO */
+	p.overtitleHero {
+		width: 57vw;
+		padding-bottom: 3.5vw;
+	}
+
+	h2.subtitleHero,
+	p.textHero,
+	p.overtitleHero {
+		font-size: 3.3vw;
+		line-height: 4.4vw;
+	}
+
+	h2.subtitleHero {
+		width: 77vw;
+	}
+
+	p.textHero {
+		width: 74vw;
+	}
+
+	.btnHero {
+		width: 70vw;
+	}
+
+	.col2Hero {
+		background-image: url('../images/heroFotonaBrixia551.webp');
+		height: calc(100vw / (750 / 574));
+	}
+
+	/* VIDEO */
+	.videoFotona .btn {
+		width: 70vw;
+	}
+
+	/* TRATTAMENTO */
+	li.itemList {
+		font-size: 3.3vw;
+		width: 70vw;
+	}
+
+	/* MIGLIORARE */
+	p.textMigliorare {
+		font-size: 3.3vw;
+	}
+
+	.migliorare .btn {
+		width: 70vw;
+	}
+
+	/* VISITA */
+	p.textBoldVisita,
+	p.textVisita,
+	p.textAquaVisita,
+	p.textActionVisita {
+		font-size: 3.3vw;
+	}
+
+	p.textVisita {
+		width: 79vw;
+	}
+
+	p.textAquaVisita {
+		width: 67vw;
+	}
+
+	p.textActionVisita {
+		width: 72vw;
+	}
+
+	.visita .btn {
+		width: 70vw;
+	}
+
+	/* FUNZIONA */
+	p.textBoldFunziona,
+	p.textFunziona {
+		font-size: 3.3vw;
+	}
+
+	p.textBoldFunziona {
+		width: 73vw;
+	}
+
+	p.textFunziona:nth-of-type(2),
+	p.textFunziona:nth-of-type(3) {
+		width: 80vw;
+	}
+
+	.funziona .btn {
+		width: 70vw;
+	}
+
+	.col2Funziona {
+		background: url('../images/backFunziona551.webp');
+		height: calc(100vw / (700 / 450));
+	}
+
+	/* RECENSIONI */
+	.copertinaRecensioni {
+		background: url(../images/copertinaRecensioni767.webp);
+		height: calc(100vw / (700 / 297));
+	}
+
+	p.textRecensioni {
+		font-size: 3.3vw;
+	}
+
+	.recensioni .btn {
+		width: 70vw;
+	}
+
+	/* PROBLEMI */
+	p.textProblemi {
+		font-size: 3.3vw;
+	}
+
+	.problemi .btn {
+		width: 70vw;
+	}
+
+	/* SOPPORTARE */
+	p.textSopportare {
+		font-size: 3.3vw;
+		width: 71vw;
+	}
+
+	.sopportare .btn {
+		width: 70vw;
+	}
+
+	/* FORM */
+	p.textFormVisita {
+		font-size: 3.3vw;
+	}
+
+	.nf-field-container {
+		margin-bottom: 2.8vw !important;
+	}
+
+	.nf-form-fields-required {
+		padding-bottom: 1vw;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"] {
+		font-size: 2.6vw !important;
+		padding: 3.3vw !important;
+	}
+
+	.nf-form-fields-required,
+	.nf-error-msg,
+	label {
+		font-size: 2.2vw !important;
+	}
+
+	.checkbox-wrap>.nf-field-element,
+	input[type=checkbox] {
+		height: 3.8vw !important;
+		width: 3.8vw !important;
+	}
+
+	input[type=checkbox]:checked::after {
+		width: 1.2vw !important;
+		height: 1.2vw !important;
+	}
+
+	input[type="submit"] {
+		font-size: 3.3vw;
+		padding: 3.3vw !important;
+	}
+
+	/* POPUP FORM */
+	.innerPopup {
+		width: 100vw;
+		height: 100vh;
+		padding: 10vw 8vw;
+	}
+
+	h2.titlePopup {
+		padding-bottom: 4.5vw;
+	}
+
+	.closePopup {
+		top: 2.3vw;
+		right: 1.8vw;
+	}
+
+	.closePopup span {
+		font-size: 5.5vw;
+	}
+}
+
+@media (width <=766.9px) {
+	.title--decorated::before {
+		width: 25vw;
+		height: 3vw;
+		top: -8vw;
+	}
+
+	/* HERO */
+	.col1Hero {
+		padding: 20vw 8vw 8vw;
+	}
+
+	h1.titleHero {
+		font-size: 7.3vw;
+		line-height: 8vw;
+	}
+
+	h1.titleHero,
+	h2.subtitleHero,
+	p.textHero {
+		padding-bottom: 4vw;
+	}
+
+	/* VIDEO */
+	h2.titleVideo,
+	h2.titlePopup {
+		font-size: 6.56vw;
+	}
+
+	h2.titleVideo {
+		line-height: 7.5vw;
+		width: 80vw;
+		padding-bottom: 8vw;
+	}
+
+	.videoFotona a.btnTeal {
+		margin: 8vw auto 0;
+	}
+
+	/* TRATTAMENTO */
+	.innerTrattamento {
+		padding: 20vw 8vw 8vw;
+	}
+
+	h2.titleTrattamento {
+		font-size: 9vw;
+		line-height: 9.5vw;
+		width: 77vw;
+		padding-bottom: 4vw;
+	}
+
+	.contPicTrattamento {
+		height: 80vw;
+	}
+
+	/* MIGLIORARE */
+	.migliorare {
+		padding: 20vw 8vw 8vw;
+	}
+
+	h2.titleMigliorare {
+		font-size: 9vw;
+		line-height: 9.5vw;
+		width: 73vw;
+	}
+
+	h2.titleMigliorare,
+	p.textMigliorare {
+		padding-bottom: 4vw;
+	}
+
+	/* VISITA */
+	.innerVisita {
+		padding: 20vw 8vw 8vw;
+	}
+
+	h2.titleVisita {
+		font-size: 9vw;
+		line-height: 9.5vw;
+	}
+
+	h2.titleVisita {
+		padding-bottom: 5vw;
+	}
+
+	p.textBoldVisita,
+	p.textVisita,
+	p.textAquaVisita,
+	p.textActionVisita {
+		padding-bottom: 4vw;
+	}
+
+	/* FUNZIONA */
+	.col1Funziona {
+		padding: 20vw 8vw 8vw;
+	}
+
+	h2.titleFunziona {
+		font-size: 9vw;
+		line-height: 9.5vw;
+	}
+
+	h2.titleFunziona,
+	p.textBoldFunziona,
+	p.textFunziona {
+		padding-bottom: 4vw;
+	}
+
+	/* RECENSIONI */
+	.recensioni {
+		background: #F5F7F7;
+	}
+
+	.innerRecensioni {
+		margin-top: -2vw;
+	}
+
+	h2.titleRecensioni {
+		font-size: 9vw;
+		line-height: 9.5vw;
+	}
+
+	h2.titleRecensioni,
+	p.textRecensioni {
+		padding-bottom: 4vw;
+	}
+
+	/* PROBLEMI */
+	.innerProblemi {
+		padding: 20vw 8vw 8vw;
+	}
+
+	h2.titleProblemi {
+		font-size: 9vw;
+		line-height: 9.5vw;
+	}
+
+	h2.titleProblemi,
+	p.textBigProblemi,
+	p.textProblemi {
+		padding-bottom: 4vw;
+	}
+
+	p.textBigProblemi {
+		font-size: 5.9vw;
+		line-height: 6.5vw;
+	}
+
+	.contPicProblemi {
+		height: 70vw;
+	}
+
+	/* SOPPORTARE */
+	.innerSopportare {
+		padding: 20vw 8vw 8vw;
+	}
+
+	h2.titleSopportare {
+		font-size: 9vw;
+		line-height: 9.5vw;
+		width: 66vw;
+	}
+
+	h2.titleSopportare,
+	p.textSopportare {
+		padding-bottom: 4vw;
+	}
+
+	.contPicSopportare {
+		height: 80vw;
+	}
+
+	/* FORM */
+	.formVisita {
+		padding: 20vw 8vw 8vw;
+	}
+
+	h2.titleFormVisita {
+		font-size: 9vw;
+		line-height: 9.5vw;
+	}
+
+	h2.titleFormVisita,
+	p.textFormVisita {
+		padding-bottom: 4vw;
+	}
+}
+
+@media (width >=767px) {
+	h2.titleVideo span {
+		display: block;
+	}
+}
+
+@media (width >=767px) and (width <=899.9px) {
+	.title--decorated::before {
+		width: 18vw;
+		height: 2vw;
+		top: -6vw;
+	}
+
+	.btn {
+		padding: 2.5vw;
+		font-size: 2.34vw;
+		line-height: 3vw;
+	}
+
+	/* HERO */
+	.col1Hero {
+		padding: 20vw 8vw 8vw;
+	}
+
+	p.overtitleHero {
+		padding-bottom: 2.2vw;
+	}
+
+	h1.titleHero {
+		font-size: 5.7vw;
+		line-height: 6.5vw;
+	}
+
+	h2.subtitleHero,
+	p.textHero,
+	p.overtitleHero {
+		font-size: 2.34vw;
+		line-height: 3vw;
+	}
+
+	h2.subtitleHero {
+		width: 58vw;
+	}
+
+	p.textHero {
+		width: 49vw;
+	}
+
+	.btnHero {
+		width: 49vw;
+	}
+
+	.col2Hero {
+		background-image: url('../images/heroFotonaBrixia767.webp');
+		height: calc(100vw / (850 / 651));
+	}
+
+	/* VIDEO */
+	h2.titleVideo,
+	h2.titlePopup {
+		font-size: 4.7vw;
+	}
+
+	h2.titleVideo {
+		padding-bottom: 5vw;
+	}
+
+	.videoFotona a.btnTeal {
+		margin: 6vw auto 0;
+	}
+
+	.videoFotona .btn {
+		width: 49vw;
+	}
+
+	/* TRATTAMENTO */
+	.innerTrattamento {
+		padding: 15vw 7vw 8vw;
+	}
+
+	h2.titleTrattamento {
+		font-size: 6.6vw;
+		line-height: 7vw;
+		width: 57vw;
+	}
+
+	li.itemList {
+		font-size: 2.34vw;
+		width: 51vw;
+	}
+
+	.contPicTrattamento {
+		height: 75vw;
+	}
+
+	/* MIGLIORARE */
+	.migliorare {
+		padding: 15vw 8vw 8vw;
+	}
+
+	h2.titleMigliorare {
+		font-size: 6.6vw;
+		line-height: 7vw;
+		width: 53vw;
+		padding-bottom: 3vw;
+	}
+
+	p.textMigliorare {
+		font-size: 2.34vw;
+		width: 61vw;
+	}
+
+	.migliorare .btn {
+		width: 49vw;
+	}
+
+	/* VISTA */
+	.innerVisita {
+		padding: 15vw 8vw 8vw;
+	}
+
+	h2.titleVisita {
+		font-size: 6.6vw;
+		line-height: 7vw;
+		width: 60vw;
+	}
+
+	p.textBoldVisita,
+	p.textVisita,
+	p.textAquaVisita,
+	p.textActionVisita {
+		font-size: 2.34vw;
+	}
+
+	p.textBoldVisita,
+	p.textVisita {
+		width: 60vw;
+	}
+
+	p.textAquaVisita {
+		width: 48vw;
+	}
+
+	p.textActionVisita {
+		width: 56vw;
+	}
+
+	.visita .btn {
+		width: 49vw;
+	}
+
+	/* FUNZIONA */
+	.col1Funziona {
+		padding: 15vw 8vw 8vw;
+	}
+
+	h2.titleFunziona {
+		font-size: 6.6vw;
+		line-height: 7vw;
+	}
+
+	p.textBoldFunziona,
+	p.textFunziona {
+		font-size: 2.34vw;
+	}
+
+	p.textBoldFunziona,
+	p.textFunziona {
+		width: 64vw;
+	}
+
+	.funziona .btn {
+		width: 49vw;
+	}
+
+	.col2Funziona {
+		background: url('../images/backFunziona767.webp');
+		height: calc(100vw / (850 / 547));
+	}
+
+	/* RECENSIONI */
+	.copertinaRecensioni {
+		background: url('../images/copertinaRecensioni767.webp');
+		height: calc(100vw / (850/ 361));
+	}
+
+	.innerRecensioni {
+		margin-top: -6vw;
+	}
+
+	h2.titleRecensioni {
+		font-size: 6.6vw;
+		line-height: 7vw;
+		width: 79vw;
+	}
+
+	p.textRecensioni {
+		font-size: 2.34vw;
+		width: 69vw;
+	}
+
+	.recensioni .btn {
+		width: 49vw;
+	}
+
+	/* PROBLEMI */
+	.innerProblemi {
+		padding: 15vw 8vw 8vw;
+	}
+
+	h2.titleProblemi {
+		font-size: 6.6vw;
+		line-height: 7vw;
+		width: 65vw;
+	}
+
+	p.textBigProblemi {
+		font-size: 4.23vw;
+		line-height: 5vw;
+		width: 56vw;
+	}
+
+	p.textProblemi {
+		font-size: 2.34vw;
+		width: 58vw;
+	}
+
+	.problemi .btn {
+		width: 49vw;
+	}
+
+	.contPicProblemi {
+		height: 80vw;
+	}
+
+	/* SOPPORTARE */
+	.innerSopportare {
+		padding: 15vw 8vw 8vw;
+	}
+
+	h2.titleSopportare {
+		font-size: 6.6vw;
+		line-height: 7vw;
+		width: 50vw;
+	}
+
+	p.textSopportare {
+		font-size: 2.34vw;
+		width: 51vw;
+	}
+
+	.sopportare .btn {
+		width: 49vw;
+	}
+
+	.contPicSopportare {
+		height: 70vw;
+	}
+
+	/* FORM */
+	.formVisita {
+		padding: 15vw 8vw 8vw;
+	}
+
+	h2.titleFormVisita {
+		font-size: 6.6vw;
+		line-height: 7vw;
+	}
+
+	p.textFormVisita {
+		font-size: 2.34vw;
+		width: 59vw;
+		padding-bottom: 3vw;
+	}
+
+	.nf-field-container {
+		margin-bottom: 2vw !important;
+	}
+
+	.nf-form-fields-required {
+		padding-bottom: 0.7vw;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"] {
+		font-size: 1.89vw !important;
+		padding: 2.3vw !important;
+	}
+
+	.nf-form-fields-required,
+	.nf-error-msg,
+	label {
+		font-size: 1.65vw !important;
+	}
+
+	.checkbox-wrap>.nf-field-element,
+	input[type=checkbox] {
+		height: 2.8vw !important;
+		width: 2.8vw !important;
+	}
+
+	input[type=checkbox]:checked::after {
+		width: 0.8vw !important;
+		height: 0.8vw !important;
+	}
+
+	input[type="submit"] {
+		font-size: 2.34vw;
+		padding: 2.5vw !important;
+	}
+
+	/* POPUP FORM */
+	.innerPopup {
+		width: 80vw;
+		padding: 7vw;
+	}
+
+	h2.titlePopup {
+		padding-bottom: 3.5vw;
+	}
+
+	.closePopup {
+		top: 1.8vw;
+		right: 1.5vw;
+	}
+
+	.closePopup span {
+		font-size: 4vw;
+	}
+}
+
+@media (width >=767px) and (width <=1099.9px) {
+
+	/* HERO */
+	h1.titleHero,
+	h2.subtitleHero,
+	p.textHero {
+		padding-bottom: 3vw;
+	}
+
+	/* TRATTAMENTO */
+	h2.titleTrattamento {
+		padding-bottom: 3vw;
+	}
+
+	/* MIGLIORARE */
+	p.textMigliorare {
+		padding-bottom: 3vw;
+	}
+
+	/* VISITARE */
+	h2.titleVisita {
+		padding-bottom: 4vw;
+	}
+
+	p.textBoldVisita,
+	p.textVisita,
+	p.textAquaVisita {
+		padding-bottom: 3vw;
+	}
+
+	/* FUNZIONA */
+	h2.titleFunziona,
+	p.textBoldFunziona,
+	p.textFunziona {
+		padding-bottom: 3vw;
+	}
+
+	p.textActionVisita {
+		padding-bottom: 5vw;
+	}
+
+	h2.titleRecensioni,
+	p.textRecensioni {
+		padding-bottom: 3vw;
+	}
+
+	/* RECENSIONI */
+	.recensioni {
+		background: #F5F7F7;
+	}
+
+	/* PROBLEMI */
+	h2.titleProblemi,
+	p.textBigProblemi,
+	p.textProblemi {
+		padding-bottom: 3vw;
+	}
+
+	/* SOPPORTARE */
+	h2.titleSopportare,
+	p.textSopportare {
+		padding-bottom: 3vw;
+	}
+
+	/* FORM */
+	h2.titleFormVisita {
+		padding-bottom: 3vw;
+	}
+}
+
+@media (width <=899.9px) {
+
+	/* HERO */
+	.col2Hero {
+		background-size: cover;
+	}
+
+	/* VIDEO */
+	.innerVideoFotona {
+		padding: 8vw;
+	}
+
+	/* TRATTAMENTO */
+	ul.listTrattamento {
+		gap: 3vw;
+	}
+
+	/* MIGLIORARE */
+	.gridMigliorare {
+		flex-direction: column;
+	}
+
+	/* FUNZIONA */
+	.col2Funziona {
+		background-size: contain;
+	}
+
+	/* RECENSIONI */
+	.innerRecensioni {
+		padding: 0 8vw 8vw;
+	}
+
+	/* FORM */
+	.gridFormVisita {
+		flex-direction: column;
+	}
+}
+
+@media (width >=900px) {
+
+	/* TRATTAMENTO */
+	.contPicTrattamento {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0;
+		line-height: 0;
+	}
+
+	/* MIGLIORARE */
+	.gridMigliorare {
+		justify-content: space-between;
+	}
+
+	/* VISITA */
+	.contPicVisita {
+		position: absolute;
+		right: 4vw;
+		line-height: 0;
+	}
+
+	.boxTealVisita {
+		right: 0;
+		top: 0;
+	}
+
+	/* FUNZIONA */
+	.boxTealFunziona {
+		right: 0;
+	}
+
+	/* RECENSIONI */
+	.boxAquaRecensioni2 {
+		right: 0;
+	}
+
+	/* VISITA */
+	.contPicProblemi {
+		position: absolute;
+		right: 4vw;
+		top: 15vw;
+		line-height: 0;
+	}
+
+	.boxAquaProblemi {
+		right: 0;
+		top: 0;
+	}
+
+	.boxTealProblemi {
+		bottom: 0;
+	}
+
+	/* SOPPORTARE */
+	.contPicSopportare {
+		position: absolute;
+		right: 0;
+		line-height: 0;
+	}
+
+	.boxAquaSopportare {
+		right: 0;
+		top: 0;
+	}
+
+	.boxTealSopportare {
+		bottom: 0;
+	}
+}
+
+@media (width >=900px) and (width <=1099.9px) {
+	.title--decorated::before {
+		width: 16vw;
+		height: 1.5vw;
+		top: -5vw;
+	}
+
+	.btn {
+		padding: 2vw;
+		font-size: 2vw;
+		line-height: 2.5vw;
+	}
+
+	.square {
+		width: 21.5vw;
+		height: 18vw;
+	}
+
+	/* HERO */
+	.hero {
+		background-position: -3vw 3vw;
+		background-image: url('../images/heroFotonaBrixia900.webp');
+	}
+
+	.gridHero {
+		padding: 17vw 7vw 6vw;
+	}
+
+	p.overtitleHero {
+		padding-bottom: 2vw;
+	}
+
+	h1.titleHero {
+		font-size: 4.8vw;
+		line-height: 5.5vw;
+		width: 70vw;
+	}
+
+	h2.subtitleHero,
+	p.textHero,
+	p.overtitleHero {
+		font-size: 2vw;
+		line-height: 2.5vw;
+	}
+
+	h2.subtitleHero {
+		width: 46vw;
+	}
+
+	p.textHero {
+		width: 42vw;
+	}
+
+	.btnHero {
+		width: 42vw;
+	}
+
+	/* VIDEO */
+	.innerVideoFotona {
+		padding: 6vw 7vw;
+	}
+
+	h2.titleVideo,
+	h2.titlePopup {
+		font-size: 4vw;
+	}
+
+	h2.titleVideo {
+		padding-bottom: 5vw;
+	}
+
+	.videoFotona a.btnTeal {
+		margin: 6vw auto 0;
+	}
+
+	.videoFotona .btn {
+		width: 42vw;
+	}
+
+	/* TRATTAMENTO */
+	.trattamento {
+		padding: 12vw 7vw;
+	}
+
+	h2.titleTrattamento {
+		font-size: 5.6vw;
+		line-height: 6vw;
+		width: 49vw;
+	}
+
+	li.itemList {
+		font-size: 2vw;
+		width: 43vw;
+	}
+
+	.contPicTrattamento {
+		width: 44vw;
+		height: 68vw;
+	}
+
+	.boxAquaTrattamento {
+		top: -5vw;
+	}
+
+	.boxTealTrattamento {
+		right: 44vw;
+		bottom: -9vw;
+	}
+
+	/* MIGLIORARE */
+	.migliorare {
+		padding: 14vw 7vw 6vw;
+	}
+
+	h2.titleMigliorare {
+		font-size: 5.6vw;
+		line-height: 6vw;
+		width: 44vw;
+	}
+
+	p.textMigliorare {
+		font-size: 2vw;
+		width: 38vw;
+	}
+
+	.colMigliorare .btn {
+		width: 100%;
+	}
+
+	/* VISITA */
+	.visita {
+		padding: 12vw 7vw 6vw;
+	}
+
+	h2.titleVisita {
+		font-size: 5.6vw;
+		line-height: 6vw;
+	}
+
+	h2.titleVisita {
+		width: 50vw;
+	}
+
+	p.textBoldVisita,
+	p.textVisita,
+	p.textAquaVisita,
+	p.textActionVisita {
+		font-size: 2vw;
+	}
+
+	p.textBoldVisita,
+	p.textVisita {
+		width: 47vw;
+	}
+
+	p.textAquaVisita {
+		width: 40vw;
+	}
+
+	p.textActionVisita {
+		width: 44vw;
+	}
+
+	.visita .btn {
+		width: 42vw;
+	}
+
+	.contPicVisita {
+		top: 12vw;
+		width: 37vw;
+		height: 52vw;
+	}
+
+	.contPicVisita img {
+		object-position: -8vw;
+	}
+
+	.boxAquaVisita {
+		top: 70vw;
+		right: 19.5vw;
+	}
+
+	/* FUNZIONA */
+	.funziona {
+		background: url('../images/picDispositivo900.webp'), #E4E2E8;
+		padding: 12vw 7vw 6vw;
+	}
+
+	.funziona {
+		background-position: bottom right !important;
+		background-repeat: no-repeat !important;
+	}
+
+	h2.titleFunziona {
+		font-size: 5.6vw;
+		line-height: 6vw;
+	}
+
+	p.textBoldFunziona,
+	p.textFunziona {
+		font-size: 2vw;
+	}
+
+	p.textBoldFunziona,
+	p.textFunziona {
+		width: 45vw;
+	}
+
+	.boxAquaFunziona {
+		top: 10vw;
+		right: 21.5vw;
+	}
+
+	.boxTealFunziona {
+		top: -8vw;
+	}
+
+	.funziona .btn {
+		width: 42vw;
+	}
+
+	/* RECENSIONI */
+	.copertinaRecensioni {
+		background: url('../images/copertinaRecensioni900.webp');
+		height: calc(100vw / (1000 / 425));
+	}
+
+	.recensioni {
+		padding-inline: 7vw;
+		margin-top: -5vw;
+		padding-bottom: 6vw;
+	}
+
+	h2.titleRecensioni {
+		font-size: 5.6vw;
+		line-height: 6vw;
+		width: 65vw;
+	}
+
+	p.textRecensioni {
+		font-size: 2vw;
+		width: 75vw;
+	}
+
+	.boxAquaRecensioni1,
+	.boxAquaRecensioni3 {
+		width: 9.5vw;
+		height: 9.5vw;
+	}
+
+	.boxAquaRecensioni2,
+	.boxAquaRecensioni4 {
+		width: 9.5vw;
+		height: 6.25vw;
+	}
+
+	.boxAquaRecensioni1 {
+		right: 9.5vw;
+		top: -8vw;
+	}
+
+	.boxAquaRecensioni2 {
+		top: 1.5vw;
+	}
+
+	.boxAquaRecensioni3 {
+		top: 7.75vw;
+		right: 9.5vw;
+	}
+
+	.boxAquaRecensioni4 {
+		right: 19vw;
+		top: 1.5vw;
+	}
+
+	.recensioni .btn {
+		width: 42vw;
+	}
+
+	/* PROBLEMI */
+	.problemi {
+		padding: 12vw 7vw 5.6vw;
+	}
+
+	h2.titleProblemi {
+		font-size: 5.6vw;
+		line-height: 6vw;
+		width: 48vw;
+	}
+
+	p.textBigProblemi {
+		font-size: 3.61vw;
+		line-height: 4vw;
+		width: 45vw;
+	}
+
+	p.textProblemi {
+		font-size: 2vw;
+		width: 40vw;
+	}
+
+	.problemi .btn {
+		width: 42vw;
+	}
+
+	.contPicProblemi {
+		top: 12vw;
+		width: 39vw;
+		height: 64.5vw;
+	}
+
+	.boxTealProblemi {
+		right: 21.5vw;
+	}
+
+	/* SOPPORTARE */
+	.sopportare {
+		padding: 18vw 7vw 16vw;
+	}
+
+	h2.titleSopportare {
+		font-size: 5.6vw;
+		line-height: 6vw;
+		width: 40vw;
+	}
+
+	p.textSopportare {
+		font-size: 2vw;
+		width: 43vw;
+	}
+
+	.sopportare .btn {
+		width: 42vw;
+	}
+
+	.contPicSopportare {
+		top: 18vw;
+		width: 45vw;
+		height: 65vw;
+	}
+
+	.boxTealSopportare {
+		right: 23.5vw;
+	}
+
+	/* FORM */
+	.formVisita {
+		padding: 12vw 7vw 6vw;
+	}
+
+	h2.titleFormVisita {
+		font-size: 5.6vw;
+		line-height: 6vw;
+		width: 43vw;
+		padding-bottom: 3vw;
+	}
+
+	p.textFormVisita {
+		font-size: 2vw;
+		width: 41vw;
+	}
+
+	div#nf-form-1-cont {
+		margin-top: -5vw;
+		width: 40vw;
+	}
+
+	.nf-field-container {
+		margin-bottom: 1.5vw !important;
+	}
+
+	.nf-form-fields-required {
+		padding-bottom: 0.7vw;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"] {
+		font-size: 1.61vw !important;
+		padding: 1.6vw 1.8vw !important;
+	}
+
+	.nf-form-fields-required,
+	.nf-error-msg,
+	label {
+		font-size: 1.3vw !important;
+	}
+
+	.checkbox-wrap>.nf-field-element,
+	input[type=checkbox] {
+		height: 2.2vw !important;
+		width: 2.2vw !important;
+	}
+
+	input[type=checkbox]:checked::after {
+		width: 1vw !important;
+	}
+
+	input[type="submit"] {
+		font-size: 2vw;
+		padding: 1.57vw !important;
+	}
+
+	/* POPUP FORM */
+	.innerPopup {
+		width: 65vw;
+		padding: 5vw 5.5vw;
+	}
+
+	h2.titlePopup {
+		padding-bottom: 3vw;
+	}
+
+	.closePopup {
+		top: 1.5vw;
+		right: 1.2vw;
+	}
+
+	.closePopup span {
+		font-size: 3vw;
+	}
+}
+
+@media (width >=900px) and (width <=1400px) {
+
+	/* TRATTAMENTO */
+	.contPicTrattamento {
+		overflow: hidden;
+	}
+
+	img.picTrattamento {
+		object-position: right center;
+	}
+
+	/* FUNZIONA */
+	.funziona {
+		background-size: 85vw !important;
+	}
+}
+
+@media (width >=1100px) {
+	.container-lg {
+		margin: auto;
+	}
+
+	/* HERO */
+	.gridHero {
+		height: 100%;
+		display: flex;
+	}
+
+	h1.titleHero,
+	h2.subtitleHero,
+	p.textHero {
+		padding-bottom: 2vw;
+	}
+
+	/* TRATTAMENTO */
+	h2.titleTrattamento {
+		padding-bottom: 2vw;
+	}
+
+	ul.listTrattamento {
+		gap: 2vw;
+	}
+
+	/* MIGLIORARE */
+	p.textMigliorare {
+		padding-bottom: 2vw;
+	}
+
+	/* VISITA */
+	h2.titleVisita {
+		padding-bottom: 3vw;
+	}
+
+	p.textBoldVisita,
+	p.textVisita,
+	p.textAquaVisita {
+		padding-bottom: 2vw;
+	}
+
+	p.textActionVisita {
+		padding-bottom: 4vw;
+	}
+
+	/* FUNZIONA */
+	.funziona {
+		background-position: bottom right !important;
+		background-repeat: no-repeat !important;
+	}
+
+	h2.titleFunziona,
+	p.textBoldFunziona,
+	p.textFunziona {
+		padding-bottom: 2vw;
+	}
+
+	.boxAquaFunziona {
+		top: 6.5vw;
+	}
+
+	/* RECENSIONI */
+	.recensioni {
+		background: linear-gradient(180deg, #13566b1c 0, #13566b 20%, #13566b 100%);
+	}
+
+	h2.titleRecensioni {
+		padding-bottom: 3vw;
+	}
+
+	p.textRecensioni {
+		padding-bottom: 2vw;
+	}
+
+	/* PROBLEMI */
+	h2.titleProblemi,
+	p.textBigProblemi,
+	p.textProblemi {
+		padding-bottom: 2vw;
+	}
+
+	/* SOPPORTARE */
+	h2.titleSopportare {
+		padding-bottom: 2vw;
+	}
+
+	p.textSopportare {
+		padding-bottom: 2vw;
+	}
+
+	/* FORM */
+	h2.titleFormVisita {
+		padding-bottom: 2vw;
+	}
+
+	div#nf-form-1-cont {
+		margin-top: -3vw;
+	}
+
+	input[type="submit"] {
+		padding: 1.5vw !important;
+	}
+}
+
+@media (width >=1100px) and (width <=1400px) {
+	.container-lg {
+		width: 80vw;
+	}
+
+	.title--decorated::before {
+		width: 13vw;
+		height: 1.2vw;
+		top: -4vw;
+	}
+
+	.btn {
+		padding: 1.5vw;
+		font-size: 1.63vw;
+		line-height: 2vw;
+		width: 35vw;
+	}
+
+	.square {
+		width: 18.5vw;
+		height: 14.5vw;
+	}
+
+	/* HERO */
+	.hero {
+		background-position: 3vw;
+		background-image: url('../images/heroFotonaBrixia1100.webp');
+	}
+
+	.gridHero {
+		padding-block: 16vw 6vw;
+	}
+
+	p.overtitleHero {
+		padding-bottom: 1.5vw;
+	}
+
+	h1.titleHero {
+		font-size: 3.9vw;
+		line-height: 4.3vw;
+		width: 55vw;
+	}
+
+	h2.subtitleHero,
+	p.textHero,
+	p.overtitleHero {
+		font-size: 1.63vw;
+		line-height: 2.2vw;
+	}
+
+	h2.subtitleHero {
+		width: 38vw;
+	}
+
+	p.textHero {
+		width: 35vw;
+	}
+
+	/* VIDEO */
+	.innerVideoFotona {
+		padding-block: 5vw;
+	}
+
+	h2.titleVideo,
+	h2.titlePopup {
+		font-size: 3.28vw;
+	}
+
+	h2.titleVideo {
+		padding-bottom: 4vw;
+	}
+
+	.videoFotona a.btnTeal {
+		margin: 5vw auto 0;
+	}
+
+	/* TRATTAMENTO */
+	.trattamento {
+		padding-block: 12vw 10vw;
+	}
+
+	h2.titleTrattamento {
+		font-size: 4.6vw;
+		line-height: 5vw;
+		width: 40vw;
+	}
+
+	li.itemList {
+		font-size: 1.63vw;
+		width: 35vw;
+	}
+
+	.contPicTrattamento {
+		width: 48vw;
+		height: 57vw;
+	}
+
+	.boxAquaTrattamento {
+		top: -5vw;
+	}
+
+	.boxTealTrattamento {
+		right: 48vw;
+		bottom: -7vw;
+	}
+
+	/* MIGLIORARE */
+	.migliorare {
+		padding-block: 10vw 6vw;
+	}
+
+	h2.titleMigliorare {
+		font-size: 4.6vw;
+		line-height: 5vw;
+		width: 37vw;
+	}
+
+	p.textMigliorare {
+		font-size: 1.63vw;
+		width: 39.5vw;
+	}
+
+	/* VISITA */
+	.visita {
+		padding-block: 10vw 6vw;
+	}
+
+	h2.titleVisita {
+		font-size: 4.6vw;
+		line-height: 5vw;
+	}
+
+	h2.titleVisita,
+	p.textBoldVisita {
+		width: 41vw;
+	}
+
+	p.textBoldVisita,
+	p.textVisita,
+	p.textAquaVisita,
+	p.textActionVisita {
+		font-size: 1.63vw;
+	}
+
+	p.textVisita {
+		width: 42vw;
+	}
+
+	p.textAquaVisita {
+		width: 32vw;
+	}
+
+	p.textActionVisita {
+		width: 39vw;
+	}
+
+	.contPicVisita {
+		top: 10vw;
+		width: 41vw;
+		height: 37vw;
+	}
+
+	.boxAquaVisita {
+		top: 51.5vw;
+		right: 26.5vw;
+	}
+
+	/* FUNZIONA */
+	.funziona {
+		background: url('../images/picDispositivo1100.webp'), #E4E2E8;
+		padding-block: 10vw 6vw;
+	}
+
+	h2.titleFunziona {
+		font-size: 4.6vw;
+		line-height: 3.8vw;
+	}
+
+	p.textBoldFunziona,
+	p.textFunziona {
+		font-size: 1.63vw;
+	}
+
+	p.textBoldFunziona,
+	p.textFunziona {
+		width: 45vw;
+	}
+
+	.boxAquaFunziona {
+		right: 18.5vw;
+	}
+
+	.boxTealFunziona {
+		top: -8vw;
+	}
+
+	/* RECENSIONI */
+	.copertinaRecensioni {
+		background: url('../images/copertinaRecensioni1100.webp');
+		height: calc(100vw / (1200 / 510));
+	}
+
+	.recensioni {
+		margin-top: -9vw;
+		padding-bottom: 4vw;
+	}
+
+	h2.titleRecensioni {
+		font-size: 4.6vw;
+		line-height: 5vw;
+		width: 54vw;
+	}
+
+	p.textRecensioni {
+		font-size: 1.63vw;
+		width: 61vw;
+	}
+
+	.boxAquaRecensioni1,
+	.boxAquaRecensioni3 {
+		width: 11.5vw;
+		height: 11.5vw;
+	}
+
+	.boxAquaRecensioni2,
+	.boxAquaRecensioni4 {
+		width: 11.5vw;
+		height: 6.25vw;
+	}
+
+	.boxAquaRecensioni1 {
+		right: 11.5vw;
+		top: -7vw;
+	}
+
+	.boxAquaRecensioni2 {
+		top: 4.5vw;
+	}
+
+	.boxAquaRecensioni3 {
+		top: 10.75vw;
+		right: 11.5vw;
+	}
+
+	.boxAquaRecensioni4 {
+		right: 23vw;
+		top: 4.5vw;
+	}
+
+	/* PROBLEMI */
+	.problemi {
+		padding-block: 10vw 5.6vw;
+	}
+
+	h2.titleProblemi {
+		font-size: 4.6vw;
+		line-height: 5vw;
+		width: 43vw;
+	}
+
+	p.textBigProblemi {
+		font-size: 2.95vw;
+		line-height: 3.5vw;
+		width: 38vw;
+	}
+
+	p.textProblemi {
+		font-size: 1.63vw;
+		width: 40vw;
+	}
+
+	.contPicProblemi {
+		top: 10vw;
+		width: 33vw;
+		height: 46.8vw;
+	}
+
+	.boxTealProblemi {
+		right: 18.5vw;
+	}
+
+	/* SOPPORTARE */
+	.sopportare {
+		padding-block: 18vw 15.7vw;
+	}
+
+	h2.titleSopportare {
+		font-size: 4.6vw;
+		line-height: 5vw;
+		width: 33vw;
+	}
+
+	p.textSopportare {
+		font-size: 1.63vw;
+		width: 35vw;
+	}
+
+	.contPicSopportare {
+		top: 14.5vw;
+		width: 48vw;
+		height: 58vw;
+	}
+
+	.boxTealSopportare {
+		right: 29.5vw;
+	}
+
+	/* FORM */
+	.formVisita {
+		padding-block: 10vw 6vw;
+	}
+
+	h2.titleFormVisita {
+		font-size: 4.6vw;
+		line-height: 5vw;
+		width: 35vw;
+	}
+
+	p.textFormVisita {
+		font-size: 1.63vw;
+		width: 33vw;
+	}
+
+	div#nf-form-1-cont {
+		width: 38vw;
+	}
+
+	.nf-field-container {
+		margin-bottom: 1.5vw !important;
+	}
+
+	.nf-form-fields-required {
+		padding-bottom: 0.5vw;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"] {
+		font-size: 1.32vw !important;
+		padding: 1.6vw 1.8vw !important;
+	}
+
+	.nf-form-fields-required,
+	.nf-error-msg,
+	label {
+		font-size: 1.1vw !important;
+	}
+
+	.checkbox-wrap>.nf-field-element,
+	input[type=checkbox] {
+		height: 2vw !important;
+		width: 2vw !important;
+	}
+
+	input[type=checkbox]:checked::after {
+		width: 1vw !important;
+	}
+
+	input[type=submit] {
+		font-size: 1.63vw;
+	}
+
+	/* POPUP FORM */
+	.innerPopup {
+		width: 55vw;
+		padding: 4vw 5vw;
+	}
+
+	h2.titlePopup {
+		padding-bottom: 2vw;
+	}
+
+	.closePopup {
+		top: 1.2vw;
+		right: 1vw;
+	}
+
+	.closePopup span {
+		font-size: 2.4vw;
+	}
+}
+
+@media (width <=1400px) {
+	.img-full {
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+@media (width >=1401px) {
+	.container-lg {
+		width: 70vw;
+	}
+
+	.title--decorated::before {
+		width: 10.3vw;
+		height: 1vw;
+		top: -3vw;
+	}
+
+	.btn {
+		padding: 1vw;
+		font-size: 1.3vw;
+		line-height: 1.8vw;
+		width: 30vw;
+	}
+
+	.square {
+		width: 15.5vw;
+		height: 11.5vw;
+	}
+
+	/* HERO */
+	.hero {
+		background-position: right;
+		background-image: url('../images/heroFotonaBrixia1401.webp');
+		max-height: 1172px;
+		height: 100vh;
+	}
+
+	.gridHero {
+		padding-block: 10vw 4vw;
+	}
+
+	.col1Hero {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	p.overtitleHero {
+		padding-bottom: 1vw;
+	}
+
+	h1.titleHero {
+		font-size: 3.15vw;
+		width: 45vw;
+		line-height: 3.3vw;
+	}
+
+	h2.subtitleHero,
+	p.textHero,
+	p.overtitleHero {
+		font-size: 1.3vw;
+		line-height: 1.8vw;
+	}
+
+	h2.subtitleHero {
+		width: 30vw;
+	}
+
+	p.textHero {
+		width: 28vw;
+	}
+
+	/* VIDEO */
+	.innerVideoFotona {
+		padding-block: 4vw;
+	}
+
+	h2.titleVideo,
+	h2.titlePopup {
+		font-size: 2.61vw;
+	}
+
+	h2.titleVideo {
+		padding-bottom: 3vw;
+	}
+
+	.videoFotona a.btnTeal {
+		margin: 4vw auto 0;
+	}
+
+	/* TRATTAMENTO */
+	.trattamento {
+		padding-block: 10vw 8vw;
+	}
+
+	h2.titleTrattamento {
+		font-size: 3.65vw;
+		line-height: 3.8vw;
+		width: 32vw;
+	}
+
+	li.itemList {
+		font-size: 1.3vw;
+		width: 28vw;
+	}
+
+	.contPicTrattamento {
+		width: 44vw;
+	}
+
+	.boxAquaTrattamento {
+		top: -4vw;
+	}
+
+	.boxTealTrattamento {
+		right: 44vw;
+		bottom: -5.5vw;
+	}
+
+	/* MIGLIORARE */
+	.migliorare {
+		padding-block: 8vw 4vw;
+	}
+
+	h2.titleMigliorare {
+		font-size: 3.65vw;
+		line-height: 3.8vw;
+		width: 32vw;
+	}
+
+	p.textMigliorare {
+		font-size: 1.3vw;
+		width: 34.5vw;
+	}
+
+	/* VISITA */
+	.visita {
+		padding-block: 8vw 4vw;
+	}
+
+	h2.titleVisita {
+		font-size: 3.65vw;
+		line-height: 3.8vw;
+	}
+
+	h2.titleVisita,
+	p.textBoldVisita {
+		width: 33vw;
+	}
+
+	p.textBoldVisita,
+	p.textVisita,
+	p.textAquaVisita,
+	p.textActionVisita {
+		font-size: 1.3vw;
+	}
+
+	p.textVisita {
+		width: 32.5vw;
+	}
+
+	p.textAquaVisita {
+		width: 28vw;
+	}
+
+	p.textActionVisita {
+		width: 31vw;
+	}
+
+	.contPicVisita {
+		top: 8vw;
+		width: 44vw;
+	}
+
+	.boxAquaVisita {
+		top: 45.2vw;
+		right: 32.5vw;
+	}
+
+	/* FUNZIONA */
+	.funziona {
+		background: url('../images/picDispositivo.webp'), #E4E2E8;
+		background-size: 69vw;
+		padding-block: 8vw 4vw;
+	}
+
+	h2.titleFunziona {
+		font-size: 3.65vw;
+		line-height: 3.8vw;
+	}
+
+	p.textBoldFunziona,
+	p.textFunziona {
+		font-size: 1.3vw;
+	}
+
+	p.textBoldFunziona,
+	p.textFunziona {
+		width: 36vw;
+	}
+
+	.boxAquaFunziona {
+		right: 15.5vw;
+	}
+
+	.boxTealFunziona {
+		top: -5vw;
+	}
+
+	/* RECENSIONI */
+	.copertinaRecensioni {
+		background: url('../images/copertinaRecensioni.webp');
+		height: calc(100vw / (2000 / 850));
+	}
+
+	.recensioni {
+		margin-top: -9vw;
+		padding-bottom: 4vw;
+	}
+
+	h2.titleRecensioni {
+		font-size: 3.65vw;
+		line-height: 3.8vw;
+		width: 42vw;
+	}
+
+	p.textRecensioni {
+		font-size: 1.3vw;
+		width: 49vw;
+	}
+
+	.boxAquaRecensioni1,
+	.boxAquaRecensioni3 {
+		width: 10.5vw;
+		height: 10.5vw;
+	}
+
+	.boxAquaRecensioni2,
+	.boxAquaRecensioni4 {
+		width: 10.5vw;
+		height: 5.25vw;
+	}
+
+	.boxAquaRecensioni1 {
+		right: 10.5vw;
+		top: -7vw;
+	}
+
+	.boxAquaRecensioni2 {
+		top: 3.5vw;
+	}
+
+	.boxAquaRecensioni3 {
+		top: 8.75vw;
+		right: 10.5vw;
+	}
+
+	.boxAquaRecensioni4 {
+		right: 21vw;
+		top: 3.5vw;
+	}
+
+	/* PROBLEMI */
+	.problemi {
+		padding-block: 8vw 3.8vw;
+	}
+
+	h2.titleProblemi {
+		font-size: 3.65vw;
+		line-height: 3.8vw;
+		width: 37vw;
+	}
+
+	p.textBigProblemi {
+		font-size: 2.35vw;
+		line-height: 2.8vw;
+		width: 35vw;
+	}
+
+	p.textProblemi {
+		font-size: 1.3vw;
+		width: 37vw;
+	}
+
+	.contPicProblemi {
+		top: 8vw;
+		width: 36.5vw;
+	}
+
+	.boxTealProblemi {
+		right: 25vw;
+	}
+
+	/* SOPPORTARE */
+	.sopportare {
+		padding-block: 14vw 13.8vw;
+	}
+
+	h2.titleSopportare {
+		font-size: 3.65vw;
+		line-height: 3.8vw;
+		width: 28vw;
+	}
+
+	p.textSopportare {
+		font-size: 1.3vw;
+		width: 29vw;
+	}
+
+	.contPicSopportare {
+		top: 11.5vw;
+		width: 44.1vw;
+	}
+
+	.boxTealSopportare {
+		right: 28.6vw;
+	}
+
+	/* FORM */
+	.formVisita {
+		padding-block: 8vw 4vw;
+	}
+
+	h2.titleFormVisita {
+		font-size: 3.65vw;
+		line-height: 3.8vw;
+		width: 28vw;
+	}
+
+	p.textFormVisita {
+		font-size: 1.3vw;
+		width: 28vw;
+	}
+
+	div#nf-form-1-cont {
+		width: 35vw;
+	}
+
+	.nf-field-container {
+		margin-bottom: 1vw !important;
+	}
+
+	.nf-form-fields-required {
+		padding-bottom: 0.5vw;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"] {
+		font-size: 1vw !important;
+		padding: 1.2vw 1.5vw !important;
+	}
+
+	.nf-form-fields-required,
+	.nf-error-msg,
+	label {
+		font-size: 0.8vw !important;
+	}
+
+	.checkbox-wrap>.nf-field-element,
+	input[type=checkbox] {
+		width: 1.2vw !important;
+		height: 1.2vw !important;
+	}
+
+	input[type=checkbox]:checked::after {
+		width: 0.5vw !important;
+	}
+
+	input[type=submit] {
+		font-size: 1.3vw;
+	}
+
+	/* POPUP FORM */
+	.innerPopup {
+		width: 43vw;
+		padding: 4vw;
+	}
+
+	h2.titlePopup {
+		padding-bottom: 2vw;
+	}
+
+	.closePopup {
+		top: 1.2vw;
+		right: 1vw;
+	}
+
+	.closePopup span {
+		font-size: 1.7vw;
+	}
+}

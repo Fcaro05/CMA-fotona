@@ -206,6 +206,60 @@ h2.titleProblemi span {
 	color: #FFFFFF80;
 }
 
+span.wpcf7 form.sent .wpcf7-response-output {
+	border-color: #46b450;
+}
+
+/* FOOTER MOBILE FIX (Brixia Health Style) */
+@media (max-width: 766.9px) {
+	.gridFooter {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.colFooter:first-child,
+	.colFooter:nth-child(2),
+	.colFooter:last-child {
+		order: unset !important;
+		width: 100%;
+		align-items: center !important;
+		justify-content: center !important;
+		padding: 0 0 10vw 0 !important;
+		border-top: none !important;
+	}
+
+	.colFooter:last-child {
+		flex-direction: column !important;
+		grid-gap: 3vw 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	img.logoFooter {
+		margin-left: 0 !important;
+		margin-bottom: 6vw !important;
+		width: 60vw !important;
+	}
+
+	.socialFooter {
+		justify-content: center;
+		margin-top: 6vw !important;
+	}
+
+	h3.titleFooter,
+	p.textFooter,
+	a.linkFooter {
+		text-align: center !important;
+	}
+
+	.boxTextFooter {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
 span.ninja-forms-req-symbol {
 	color: #487E89;
 	font-weight: 600;

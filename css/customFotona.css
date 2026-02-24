@@ -210,8 +210,25 @@ span.wpcf7 form.sent .wpcf7-response-output {
 	border-color: #46b450;
 }
 
+/* UTILITY CLASSES */
+@media (max-width: 766.9px) {
+	.hide-on-mobile {
+		display: none !important;
+	}
+}
+
+@media (min-width: 767px) {
+	.hide-on-desktop {
+		display: none !important;
+	}
+}
+
 /* FOOTER MOBILE FIX (Brixia Health Style) */
 @media (max-width: 766.9px) {
+	.mb-mobile-footer {
+		margin-bottom: 6vw !important;
+	}
+
 	.gridFooter {
 		display: flex;
 		flex-direction: column;

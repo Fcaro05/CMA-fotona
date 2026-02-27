@@ -198,9 +198,9 @@ h2.titleProblemi span {
 	justify-content: space-between;
 }
 
-.nf-form-fields-required,
-.nf-after-field .nf-error-msg,
-.nf-error-msg.nf-error-field-errors {
+.crm-form-note,
+.crm-feedback,
+.crm-feedback {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
 	color: #FFFFFF80;
@@ -277,13 +277,13 @@ span.wpcf7 form.sent .wpcf7-response-output {
 	}
 }
 
-span.ninja-forms-req-symbol {
+.crm-req-symbol {
 	color: #487E89;
 	font-weight: 600;
 }
 
 input::placeholder,
-.checkbox-wrap>.nf-field-label>label {
+.checkbox-wrap>label {
 	font-weight: 500;
 	color: #6E7E82;
 }
@@ -292,7 +292,7 @@ input::placeholder,
 	display: flex;
 }
 
-.checkbox-wrap>.nf-field-label {
+.checkbox-wrap {
 	padding: 0 !important;
 }
 
@@ -321,7 +321,7 @@ input[type=checkbox] {
 
 /* High-specificity override to beat NinjaForms display-structure.css width:auto */
 .field-wrap>div input[type=checkbox],
-.nf-field-element input[type=checkbox],
+.checkbox-wrap input[type=checkbox],
 .checkbox-wrap input[type=checkbox] {
 	width: 20px !important;
 	height: 20px !important;
@@ -374,9 +374,9 @@ label a:hover {
 	color: #487E89;
 }
 
-.nf-form-fields-required,
-.checkbox-wrap>.nf-field-label>label,
-.nf-after-field .nf-error-msg {
+.crm-form-note,
+.checkbox-wrap>label,
+.crm-feedback {
 	font-size: 15px;
 }
 
@@ -525,11 +525,11 @@ label a:hover {
 		font-size: 4vw;
 	}
 
-	.nf-field-container {
+	.campo {
 		margin-bottom: 3.3vw !important;
 	}
 
-	.nf-form-fields-required {
+	.crm-form-note {
 		padding-bottom: 1.5vw;
 	}
 
@@ -540,13 +540,13 @@ label a:hover {
 		padding: 4vw 4.5vw !important;
 	}
 
-	.nf-form-fields-required,
-	.nf-error-msg,
+	.crm-form-note,
+	.crm-feedback,
 	label {
 		font-size: 3.2vw !important;
 	}
 
-	.checkbox-wrap>.nf-field-element,
+	.checkbox-wrap input[type=checkbox],
 	input[type=checkbox] {
 		height: 5vw !important;
 		width: 5vw !important;
@@ -726,11 +726,11 @@ label a:hover {
 		font-size: 3.3vw;
 	}
 
-	.nf-field-container {
+	.campo {
 		margin-bottom: 2.8vw !important;
 	}
 
-	.nf-form-fields-required {
+	.crm-form-note {
 		padding-bottom: 1vw;
 	}
 
@@ -741,13 +741,13 @@ label a:hover {
 		padding: 3.3vw !important;
 	}
 
-	.nf-form-fields-required,
-	.nf-error-msg,
+	.crm-form-note,
+	.crm-feedback,
 	label {
 		font-size: 2.2vw !important;
 	}
 
-	.checkbox-wrap>.nf-field-element,
+	.checkbox-wrap input[type=checkbox],
 	input[type=checkbox] {
 		height: 3.8vw !important;
 		width: 3.8vw !important;
@@ -1247,11 +1247,11 @@ label a:hover {
 		padding-bottom: 3vw;
 	}
 
-	.nf-field-container {
+	.campo {
 		margin-bottom: 2vw !important;
 	}
 
-	.nf-form-fields-required {
+	.crm-form-note {
 		padding-bottom: 0.7vw;
 	}
 
@@ -1262,13 +1262,13 @@ label a:hover {
 		padding: 2.3vw !important;
 	}
 
-	.nf-form-fields-required,
-	.nf-error-msg,
+	.crm-form-note,
+	.crm-feedback,
 	label {
 		font-size: 1.65vw !important;
 	}
 
-	.checkbox-wrap>.nf-field-element,
+	.checkbox-wrap input[type=checkbox],
 	input[type=checkbox] {
 		height: 2.8vw !important;
 		width: 2.8vw !important;
@@ -1846,16 +1846,16 @@ label a:hover {
 		width: 41vw;
 	}
 
-	div#nf-form-1-cont {
+	.crm-form {
 		margin-top: -5vw;
 		width: 40vw;
 	}
 
-	.nf-field-container {
+	.campo {
 		margin-bottom: 1.5vw !important;
 	}
 
-	.nf-form-fields-required {
+	.crm-form-note {
 		padding-bottom: 0.7vw;
 	}
 
@@ -1866,13 +1866,13 @@ label a:hover {
 		padding: 1.6vw 1.8vw !important;
 	}
 
-	.nf-form-fields-required,
-	.nf-error-msg,
+	.crm-form-note,
+	.crm-feedback,
 	label {
 		font-size: 1.3vw !important;
 	}
 
-	.checkbox-wrap>.nf-field-element,
+	.checkbox-wrap input[type=checkbox],
 	input[type=checkbox] {
 		height: 2.2vw !important;
 		width: 2.2vw !important;
@@ -2020,7 +2020,7 @@ label a:hover {
 		padding-bottom: 2vw;
 	}
 
-	div#nf-form-1-cont {
+	.crm-form {
 		margin-top: -3vw;
 	}
 
@@ -2352,15 +2352,15 @@ label a:hover {
 		width: 33vw;
 	}
 
-	div#nf-form-1-cont {
+	.crm-form {
 		width: 38vw;
 	}
 
-	.nf-field-container {
+	.campo {
 		margin-bottom: 1.5vw !important;
 	}
 
-	.nf-form-fields-required {
+	.crm-form-note {
 		padding-bottom: 0.5vw;
 	}
 
@@ -2371,13 +2371,13 @@ label a:hover {
 		padding: 1.6vw 1.8vw !important;
 	}
 
-	.nf-form-fields-required,
-	.nf-error-msg,
+	.crm-form-note,
+	.crm-feedback,
 	label {
 		font-size: 1.1vw !important;
 	}
 
-	.checkbox-wrap>.nf-field-element,
+	.checkbox-wrap input[type=checkbox],
 	input[type=checkbox] {
 		height: 2vw !important;
 		width: 2vw !important;
@@ -2746,15 +2746,15 @@ label a:hover {
 		width: 28vw;
 	}
 
-	div#nf-form-1-cont {
+	.crm-form {
 		width: 35vw;
 	}
 
-	.nf-field-container {
+	.campo {
 		margin-bottom: 1vw !important;
 	}
 
-	.nf-form-fields-required {
+	.crm-form-note {
 		padding-bottom: 0.5vw;
 	}
 
@@ -2765,13 +2765,13 @@ label a:hover {
 		padding: 1.2vw 1.5vw !important;
 	}
 
-	.nf-form-fields-required,
-	.nf-error-msg,
+	.crm-form-note,
+	.crm-feedback,
 	label {
 		font-size: 0.8vw !important;
 	}
 
-	.checkbox-wrap>.nf-field-element,
+	.checkbox-wrap input[type=checkbox],
 	input[type=checkbox] {
 		width: 1.2vw !important;
 		height: 1.2vw !important;

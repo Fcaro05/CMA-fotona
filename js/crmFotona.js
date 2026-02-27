@@ -38,6 +38,18 @@
 	}
 
 	/**
+	 * Prevent Google Sheets from interpreting user input as formula
+	 * (e.g. phone numbers that start with '+').
+	 */
+	function escapeForGoogleSheets(value) {
+		var normalized = String(value || '').trim();
+		if (/^[=+\-@]/.test(normalized)) {
+			return "'" + normalized;
+		}
+		return normalized;
+	}
+
+	/**
 	 * Show feedback message after the form
 	 */
 	function showFeedback(form, message, type) {
@@ -151,7 +163,7 @@
 			nome: nome.trim(),
 			cognome: cognome.trim(),
 			email: email.trim(),
-			telefono: telefono.trim(),
+			telefono: escapeForGoogleSheets(telefono),
 			sede: sede,
 			timestamp: new Date().toISOString()
 		};

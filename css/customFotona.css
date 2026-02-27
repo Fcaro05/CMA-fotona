@@ -2809,3 +2809,48 @@ label a:hover {
 		font-size: 1.7vw;
 	}
 }
+/* Section titles refresh inspired by brixiahealth.com */
+.section-title-brixia {
+	position: relative;
+	display: inline-block;
+	font-weight: 800 !important;
+	letter-spacing: 0.01em;
+	line-height: 1.12 !important;
+	text-wrap: balance;
+	max-width: 22ch;
+	margin-bottom: clamp(14px, 2vw, 26px);
+}
+
+.section-title-brixia::after {
+	content: "";
+	display: block;
+	width: clamp(64px, 7vw, 112px);
+	height: 4px;
+	margin-top: clamp(10px, 1.2vw, 16px);
+	border-radius: 999px;
+	background: linear-gradient(90deg, #4ad5df 0%, #34a7b7 100%);
+}
+
+h1.section-title-brixia {
+	font-size: clamp(34px, 4.6vw, 68px) !important;
+}
+
+h2.section-title-brixia {
+	font-size: clamp(30px, 3.2vw, 50px) !important;
+}
+
+@media (max-width: 767px) {
+	.section-title-brixia {
+		max-width: 100%;
+		line-height: 1.16 !important;
+		margin-bottom: 16px;
+	}
+
+	h1.section-title-brixia {
+		font-size: clamp(30px, 8.5vw, 42px) !important;
+	}
+
+	h2.section-title-brixia {
+		font-size: clamp(28px, 7.4vw, 36px) !important;
+	}
+}

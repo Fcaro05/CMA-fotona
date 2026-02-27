@@ -1307,13 +1307,24 @@
 			<h2 class="titlePopup text--white">Candidati per una visita specialistica gratuita</h2>
 			<form class="crm-form" id="crm-form-popup" novalidate>
 				<div class="campo">
-					<input type="text" name="nome" placeholder="Nome e Cognome*" required autocomplete="name" />
+					<input type="text" name="nome" placeholder="Nome*" required autocomplete="given-name" />
+				</div>
+				<div class="campo">
+					<input type="text" name="cognome" placeholder="Cognome*" required autocomplete="family-name" />
 				</div>
 				<div class="campo">
 					<input type="email" name="email" placeholder="Email*" required autocomplete="email" />
 				</div>
 				<div class="campo">
 					<input type="tel" name="telefono" placeholder="Telefono*" required autocomplete="tel" />
+				</div>
+				<div class="campo">
+					<select name="sede" required
+						style="width: 100%; border: 1px solid #ccc; border-radius: 4px; padding: 12px 16px; background-color: #fff; color: #333; font-size: 16px; font-family: inherit; height: 50px;">
+						<option value="" disabled selected>Seleziona la sede per la visita*</option>
+						<option value="Via Aniene, 2">Via Aniene 2, Milano (traversa viale certosa)</option>
+						<option value="Via Farini, 8">Via Farini 8, Milano</option>
+					</select>
 				</div>
 				<div class="campo checkbox-wrap">
 					<input type="checkbox" id="privacy-popup" name="privacy" required />

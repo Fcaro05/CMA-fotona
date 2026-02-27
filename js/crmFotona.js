@@ -109,13 +109,20 @@
 
 		// --- COLLECT VALUES ---
 		var nome = form.querySelector('input[name="nome"]').value || '';
+		var cognome = form.querySelector('input[name="cognome"]').value || '';
 		var email = form.querySelector('input[name="email"]').value || '';
 		var telefono = form.querySelector('input[name="telefono"]').value || '';
+		var sedeSelect = form.querySelector('select[name="sede"]');
+		var sede = sedeSelect ? sedeSelect.value : '';
 		var privacy = form.querySelector('input[name="privacy"]');
 
 		// --- CLIENT-SIDE VALIDATION ---
 		if (nome.trim().length < 2) {
-			showFeedback(form, '❌ Inserisci il tuo nome e cognome.', 'error');
+			showFeedback(form, '❌ Inserisci il tuo nome.', 'error');
+			return;
+		}
+		if (cognome.trim().length < 2) {
+			showFeedback(form, '❌ Inserisci il tuo cognome.', 'error');
 			return;
 		}
 		if (!isValidEmail(email)) {
@@ -124,6 +131,10 @@
 		}
 		if (!isValidPhone(telefono)) {
 			showFeedback(form, '❌ Inserisci un numero di telefono valido (minimo 6 cifre).', 'error');
+			return;
+		}
+		if (!sede) {
+			showFeedback(form, '❌ Seleziona una sede per la visita.', 'error');
 			return;
 		}
 		if (privacy && !privacy.checked) {
@@ -138,8 +149,10 @@
 		// --- SEND DATA ---
 		var data = {
 			nome: nome.trim(),
+			cognome: cognome.trim(),
 			email: email.trim(),
 			telefono: telefono.trim(),
+			sede: sede,
 			timestamp: new Date().toISOString()
 		};
 

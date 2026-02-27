@@ -45,13 +45,22 @@
 		var old = form.parentNode.querySelector('.crm-feedback');
 		if (old) old.remove();
 
-		var bgColor = '#27ae60'; // default success green
-		if (type === 'error') bgColor = '#e74c3c'; // red
-		if (type === 'warning') bgColor = '#f39c12'; // orange
+		var bgColor = '#e6f7f5'; // light teal background for success
+		var borderColor = '#487E89'; // var(--accent) / aqua border for success
+		var textColor = '#2c3e50'; // dark text
+
+		if (type === 'error') {
+			bgColor = '#fdf4f4'; // light red background
+			borderColor = '#e74c3c'; // red border
+		}
+		if (type === 'warning') {
+			bgColor = '#fffbf0'; // light orange background
+			borderColor = '#f39c12'; // orange border
+		}
 
 		var feedback = document.createElement('div');
 		feedback.className = 'crm-feedback';
-		feedback.style.cssText = 'margin-top:12px;padding:12px 16px;border-radius:6px;color:#fff;font-weight:600;font-size:14px;text-align:center;background:' + bgColor;
+		feedback.style.cssText = 'margin-top:15px; padding:14px 20px; border-radius:8px; border-left:4px solid ' + borderColor + '; color:' + textColor + '; font-weight:500; font-size:15px; text-align:left; background-color:' + bgColor + '; box-shadow: 0 4px 12px rgba(0,0,0,0.05); line-height: 1.4; transition: all 0.3s ease;';
 		feedback.textContent = message;
 
 		form.parentNode.insertBefore(feedback, form.nextSibling);
@@ -79,7 +88,7 @@
 		var honeypotVal = form.querySelector('input[name="_company_fax"]').value;
 		if (honeypotVal && honeypotVal.trim() !== '') {
 			// Bot detected — silently pretend success
-			showFeedback(form, '✅ Richiesta inviata con successo! Verrai ricontattata entro 24h.', 'success');
+			showFeedback(form, '✅ Grazie! La tua richiesta è stata inviata.', 'success');
 			return;
 		}
 

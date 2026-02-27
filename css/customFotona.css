@@ -416,6 +416,11 @@ label a:hover {
 	background-color: #25475C;
 }
 
+.popupForm .crm-form {
+	margin-top: 0 !important;
+	width: 100% !important;
+}
+
 .closePopup span {
 	line-height: 1;
 	color: white;
@@ -565,7 +570,7 @@ label a:hover {
 	/* POPUP FORM */
 	.innerPopup {
 		width: 100vw;
-		height: 100vh;
+		height: fit-content;
 		padding: 12vw 8vw;
 	}
 
@@ -766,7 +771,7 @@ label a:hover {
 	/* POPUP FORM */
 	.innerPopup {
 		width: 100vw;
-		height: 100vh;
+		height: fit-content;
 		padding: 10vw 8vw;
 	}
 
